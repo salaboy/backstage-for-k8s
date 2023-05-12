@@ -1,0 +1,24 @@
+name: CI
+on: [push]
+
+jobs:
+  build:
+    name: Build & Push
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set Node.js 16.x
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.x
+
+      - name: Build Backend
+        uses: borales/actions-yarn@v4
+        with:
+          cmd: build:backend
+
+      - name: Build Image
+        uses: borales/actions-yarn@v4
+        with:
+          cmd: build-image --tag backstage:latest

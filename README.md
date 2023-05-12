@@ -11,14 +11,14 @@ yarn install
 yarn dev
 ```
 
-### Building a Backstage image for Kubernetes utilization
+### Building a Backstage image for Kind Cluster
 
 
 First we'll build the backstage image locally and make it available for the cluster
 
 ```
-yarn --cwd backstage build:backend
-yarn --cwd backstage build-image --tag backstage:1.0.0
+yarn build:backend
+yarn build-image --tag backstage:1.0.0
 kind load docker-image backstage:1.0.0 --name platform
 ```
 
