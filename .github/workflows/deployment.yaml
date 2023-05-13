@@ -28,6 +28,11 @@ jobs:
         with:
           cmd: build:backend
       
+      - name: Build Backend
+        uses: borales/actions-yarn@v4
+        with:
+          cmd: build-image
+      
       # - name: Log in to the Container registry
       #   uses: docker/login-action@65b78e6e13532edd9afa3aa52ac7964289d1a9c1
       #   with:
@@ -35,9 +40,9 @@ jobs:
       #     username: ${{ github.actor }}
       #     password: ${{ secrets.GITHUB_TOKEN }}
       
-      - name: Build and push Docker image
-        uses: docker/build-push-action@3b5e8027fcad23fda98b2e3ac259d8d67585f671
-        with:
-          file: ./packages/backend/Dockerfile
-          push: true
-          tags: backstage:latest
+      # - name: Build and push Docker image
+      #   uses: docker/build-push-action@3b5e8027fcad23fda98b2e3ac259d8d67585f671
+      #   with:
+      #     file: ./packages/backend/Dockerfile
+      #     push: true
+      #     tags: backstage:latest
