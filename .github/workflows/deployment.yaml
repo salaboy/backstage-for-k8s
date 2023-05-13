@@ -26,7 +26,7 @@ jobs:
       - name: Build Backend
         uses: borales/actions-yarn@v4
         with:
-          cmd: build:backend --config app-config.yaml
+          cmd: build:backend
       
       - name: Build Image
         uses: borales/actions-yarn@v4
