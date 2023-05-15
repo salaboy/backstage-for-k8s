@@ -34,7 +34,7 @@ jobs:
         uses: docker/login-action@65b78e6e13532edd9afa3aa52ac7964289d1a9c1
         with:
           registry: ghcr.io
-          username: ${{ secrets.GITHUB_USER }}
+          username: salaboy
           password: ${{ secrets.GITHUB_TOKEN }}
       
       - name: Build and push
