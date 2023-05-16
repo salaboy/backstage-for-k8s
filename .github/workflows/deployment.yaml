@@ -1,4 +1,6 @@
 name: CI
+env:
+  OWNER: salaboy
 on:
   push:
   pull_request:
