@@ -40,6 +40,7 @@ jobs:
       execute_native_publish: ${{ steps.fmtok8s_ci.outputs.execute_native_publish }}
       version_to_use: ${{ steps.fmtok8s_ci.outputs.version_to_use }}
   build:
+    needs: [ setup ]
     name: Build & Push
     runs-on: ubuntu-latest
     steps:
