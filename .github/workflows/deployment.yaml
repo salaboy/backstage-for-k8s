@@ -13,7 +13,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Update composition account label
+      - name: Insert token for github integration
         uses: mikefarah/yq@v4.33.3
         with:
           cmd: yq -i '.integrations.github[0].host = "${{ secrets.PAT_TOKEN }}"' ./app-config.yaml
