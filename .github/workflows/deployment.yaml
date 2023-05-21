@@ -16,7 +16,11 @@ jobs:
       - name: Update composition account label
         uses: mikefarah/yq@v4.33.3
         with:
-          cmd: yq -i '.integrations.github[0].host = "${{ secret.PAT_TOKEN }}"' ./app-config.yaml
+          # cmd: yq -i '.integrations.github[0].host = "${{ secrets.PAT_TOKEN }}"' ./app-config.yaml
+          cmd: yq -i '.integrations.github[0].host = "yee"' ./app-config.yaml
+      
+      - name: cat
+        run: cat ./app-config.yaml
 
       - name: Set Node.js 16.x
         uses: actions/setup-node@v3
