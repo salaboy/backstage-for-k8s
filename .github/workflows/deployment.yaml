@@ -20,6 +20,10 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           default_branch: main
+      - name: Insert token for github integration
+        uses: mikefarah/yq@v4.33.3
+        with:
+          cmd: yq -i '.integrations.github[0].host = "${{ secrets.PAT_TOKEN }}"' ./app-config.yaml
       - name: Set up Docker Meta
         id: docker_meta
         uses: docker/metadata-action@v3
