@@ -13,9 +13,9 @@ metadata:
       url: https://dapr.io/
     - title: Dapr Documentation
       url: https://docs.dapr.io/
+      
   annotations:
     github.com/project-slug: backstage/backstage
-    backstage.io/techdocs-ref: dir:.
     lighthouse.com/website-url: https://backstage.io
     backstage.io/kubernetes-id: sample-app
 spec:

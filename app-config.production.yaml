@@ -41,16 +41,4 @@ catalog:
       target: https://github.com/salaboy/backstage-for-k8s/blob/main/examples/sample-app.yaml
 
     - type: url
-      target: https://github.com/salaboy/backstage-for-k8s/blob/main/examples/entities.yaml
-
-    # Local example template
-    - type: file
-      target: ./examples/template/template.yaml
-      rules:
-        - allow: [Template]
-
-    # Local example organizational data
-    - type: file
-      target: ./examples/org.yaml
-      rules:
-        - allow: [User, Group]
+      target: https://github.com/salaboy/backstage-for-k8s/blob/main/examples/template/template.yaml

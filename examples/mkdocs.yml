@@ -1,4 +1,0 @@
-site_name: sample-app
-docs_dir: docs
-plugins:
-  - techdocs-core

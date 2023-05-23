@@ -19,5 +19,5 @@
 
 # Go workspace file
 go.work
-dist-types
 node_modules
+dist-types
