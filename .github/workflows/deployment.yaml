@@ -12,6 +12,7 @@ jobs:
   setup:
     runs-on: ubuntu-20.04
     steps:
+      - uses: actions/checkout@v3
       - name: Info
         run: echo "Building ${{ github.repository }} application, branch/tag ${{ github.ref_name}}"
       - name: From Monolith to K8S CI
