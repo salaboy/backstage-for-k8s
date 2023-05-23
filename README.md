@@ -46,3 +46,5 @@ kubectl port-forward --namespace=backstage svc/backstage 5434:80
 Access http://localhost:5434/ on your browser and do some initial exploring.
 
 Enjoy!
+
+For more information visit https://www.salaboy.com/
