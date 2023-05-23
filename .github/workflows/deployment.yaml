@@ -12,7 +12,6 @@ jobs:
   setup:
     runs-on: ubuntu-20.04
     steps:
-      - uses: actions/checkout@v3
       - name: Info
         run: echo "Building ${{ github.repository }} application, branch/tag ${{ github.ref_name}}"
       - name: From Monolith to K8S CI
@@ -21,10 +20,6 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           default_branch: main
-      - name: Insert token for github integration
-        uses: mikefarah/yq@v4.33.3
-        with:
-          cmd: yq -i '.integrations.github[0].host = "${{ secrets.PAT_TOKEN }}"' ./app-config.yaml
       - name: Set up Docker Meta
         id: docker_meta
         uses: docker/metadata-action@v3
@@ -50,6 +45,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+
+      - name: Insert token for github integration
+        uses: mikefarah/yq@v4.33.3
+        with:
+          cmd: yq -i '.integrations.github[0].host = "${{ secrets.PAT_TOKEN }}"' ./app-config.yaml
 
       - name: Set Node.js 16.x
         uses: actions/setup-node@v3
