@@ -50,6 +50,8 @@ jobs:
         uses: mikefarah/yq@v4.33.3
         with:
           cmd: yq -i '.integrations.github[0].host = "${{ secrets.PAT_TOKEN }}"' ./app-config.yaml
+      
+      - run: cat ./app-config.yaml
 
       - name: Set Node.js 16.x
         uses: actions/setup-node@v3
