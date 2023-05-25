@@ -22,3 +22,5 @@ spec:
   type: service
   owner: CNCF
   lifecycle: experimental
+  system: examples
+  providesApis: [hello-world]

@@ -41,4 +41,13 @@ catalog:
       target: https://github.com/salaboy/backstage-for-k8s/blob/main/examples/sample-app.yaml
 
     - type: url
+      target: https://github.com/salaboy/backstage-for-k8s/blob/main/examples/entities.yaml
+    
+    - type: url
+      target: https://github.com/salaboy/backstage-for-k8s/blob/main/examples/org.yaml
+
+    - type: url
       target: https://github.com/salaboy/backstage-for-k8s/blob/main/examples/template/template.yaml
+    
+    - type: url
+      target: https://github.com/backstage/software-templates/blob/main/scaffolder-templates/springboot-grpc-template/template.yaml
