@@ -46,12 +46,12 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Insert token for github integration
-        uses: mikefarah/yq@v4.33.3
-        with:
-          cmd: yq -i '.integrations.github[0].token = "${{ secrets.PAT_TOKEN }}"' ./app-config.yaml
+      # - name: Insert token for github integration
+      #   uses: mikefarah/yq@v4.33.3
+      #   with:
+      #     cmd: yq -i '.integrations.github[0].token = "${{ secrets.PAT_TOKEN }}"' ./app-config.yaml
       
-      - run: cat ./app-config.yaml
+      # - run: cat ./app-config.yaml
 
       - name: Set Node.js 16.x
         uses: actions/setup-node@v3
